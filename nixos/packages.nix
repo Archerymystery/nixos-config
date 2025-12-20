@@ -15,9 +15,6 @@
     pavucontrol
     git
     vscode
-    #   python3
-    pkgs.python314
-    #    (python3.withPackages (ps: with ps; [ numpy requests ]))
     sqlitebrowser
     nixpkgs-fmt
     catppuccin-cursors
@@ -37,27 +34,9 @@
     krita
     unzip
     vesktop
-    gcc
-    libGL
-    libGLU
-    glfw
-    glew
-    freeglut
-    gnome-disk-utility
-    udisks2
-    util-linux
-    #    gtest
-    #    cmake
-    #    qtcreator
-    #    qt5.full
     brightnessctl
     obs-studio
-    #    kdePackages.umbrello
-  ];
-
-
-  services.udev.packages = [
-    pkgs.android-udev-rules
+    nix-prefetch-git
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
