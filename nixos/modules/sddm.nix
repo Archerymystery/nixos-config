@@ -5,12 +5,14 @@
     wayland = {
       enable = true;
     };
-    package = pkgs.kdePackages.sddm;
+    package = pkgs.libsForQt5.sddm; # Це Qt5 версія
     extraPackages = with pkgs; [
-      kdePackages.qtsvg
-      kdePackages.qtmultimedia
-      kdePackages.qtvirtualkeyboard
+      libsForQt5.qt5.qtsvg
+      libsForQt5.qt5.qtmultimedia
+      libsForQt5.qt5.qtvirtualkeyboard
+      libsForQt5.qt5.qtgraphicaleffects
     ];
-    theme = "sddm-astronaut-theme";
+    theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
   };
 }
+
