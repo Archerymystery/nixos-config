@@ -1,6 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
-    neovim
+    inputs.nixvim.packages.x86_64-linux.default
+    #    neovim
     fish
     fastfetch
     pkgs.wl-clipboard

@@ -10,12 +10,13 @@
     };
     #nixvim.url = "";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-25.05";
-      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
-      # url = "github:nix-community/nixvim/nixos-25.11";
-
+      url = "github:Archerymystery/nixvim-config";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # If you are not running an unstable channel of nixpkgs, select the corresponding branch of Nixvim.
+    # url = "github:nix-community/nixvim/nixos-25.11";
+
+
     # nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -35,6 +36,7 @@
         };
         modules = [
           ./nixos/configuration.nix
+
         ];
       };
 

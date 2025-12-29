@@ -7,7 +7,7 @@
 {
   imports =
     [
-      inputs.nixvim.nixosModules.nixvim
+      #      inputs.nixvim.nixosModules.nixvim
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/bootloader.nix
@@ -19,13 +19,13 @@
       #      ./modules/shell.nix
     ];
   #adb
-  programs.nixvim.enable = true;
-  programs.neovim =
-    {
-      enable = true;
-      defaultEditor = lib.mkForce true;
-
-    };
+  # programs.nixvim.enable = true;
+  programs.neovim.enable = false;
+  #   {
+  #      enable = true;
+  #      defaultEditor = lib.mkForce true;
+  #
+  #    };
   boot.initrd.kernelModules = [
     "nvidia"
     "nvidia_modeset"
