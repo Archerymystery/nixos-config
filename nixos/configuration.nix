@@ -8,6 +8,7 @@
       ./modules/users.nix
       ./packages.nix
       ./modules/sddm.nix
+      ./modules/polkit.nix
     ];
   programs.neovim.enable = false;
   boot.initrd.kernelModules = [

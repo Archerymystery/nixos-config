@@ -38,9 +38,9 @@
     brightnessctl
     obs-studio
     nix-prefetch-git
-    zapzap
     zoom-us
     gparted
+    polkit_gnome
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
