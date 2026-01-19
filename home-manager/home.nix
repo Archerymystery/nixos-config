@@ -9,7 +9,7 @@
     ./modules/hyprland.nix
     ./modules/kitty.nix
     ./modules/wofi.nix
-
+    ./modules/hyprlock.nix
   ];
   home = {
     username = "archer";
