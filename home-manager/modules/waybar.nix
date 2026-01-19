@@ -145,7 +145,7 @@
 
         "custom/powermenu" = {
           format = "󰐥";
-          on-click = "fish -c wofi-powermenu";
+          on-click = "selected=$(echo -e '⏻ Shutdown\n⭮ Reboot\n󰌾 Lock\n⏾ Suspend\n⇠ Logout' | wofi --width 250 --height 240 --dmenu --cache-file /dev/null --location 3 | awk '{print tolower($2)}') && case $selected in logout) hyprctl dispatch exit;; suspend) hyprlock & systemctl suspend;; reboot) systemctl reboot;; shutdown) systemctl poweroff;; lock) hyprlock;; esac";
         };
 
       };
