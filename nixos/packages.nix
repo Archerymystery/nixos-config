@@ -41,6 +41,7 @@
     zoom-us
     gparted
     polkit_gnome
+    (pkgs.callPackage ./custom_pakages/wofi-calc.nix { })
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
