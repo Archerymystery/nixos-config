@@ -42,6 +42,7 @@
     gparted
     polkit_gnome
     (pkgs.callPackage ./custom_pakages/wofi-calc.nix { })
+    (pkgs.callPackage ./custom_pakages/wofi-wifi-menu.nix { })
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
