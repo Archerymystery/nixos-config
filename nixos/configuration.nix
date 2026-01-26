@@ -18,8 +18,12 @@
     "nvidia_drm"
   ];
   services.udisks2.enable = true;
-  programs.adb.enable = true;
-  hardware.graphics.enable = true;
+  # programs.adb.enable = true;
+  hardware.graphics =
+    {
+      enable = true;
+      enable32Bit = true;
+    };
   networking.hostName = "nixos";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -36,7 +40,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  networking.wireless.iwd.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
 
   time.timeZone = "Europe/Kyiv";
 
@@ -76,8 +80,10 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
-    open = false;
-    forceFullCompositionPipeline = true;
+    open = true; # Set to true if using Turing or newer GPUs and you want the open kernels
+    powerManagement.enable = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
   programs.fish.enable = true;
 

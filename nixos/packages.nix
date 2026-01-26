@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     inputs.nixvim.packages.x86_64-linux.default
-    #    neovim
     fish
     fastfetch
     pkgs.wl-clipboard
@@ -20,7 +19,6 @@
     nixpkgs-fmt
     catppuccin-cursors
     hyprcursor
-    arduino-ide
     dracula-theme
     ocs-url
     discord
@@ -28,13 +26,12 @@
     sl
     bat
     bottom
-    pnpm
-    nodejs
     nodemon
     tree
     krita
+    mesa-demos
+    clinfo
     unzip
-    vesktop
     brightnessctl
     obs-studio
     nix-prefetch-git
@@ -47,7 +44,7 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     twemoji-color-font
     font-awesome
     powerline-fonts
