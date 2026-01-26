@@ -79,8 +79,8 @@
         "$mainMod, J, togglesplit,"
         "$mainMod CTRL,C, exec, wofi-calc "
 
-        "$mainMod, L, togglespecialworkspace, magic"
-        "$mainMod SHIFT, L, movetoworkspace, special:magic"
+        "$mainMod, K, togglespecialworkspace, magic"
+        "$mainMod SHIFT, K, movetoworkspace, special:magic"
 
         ",107, exec, grimblast copysave screen"
         "CTRL,107, exec, grimblast copysave area"
