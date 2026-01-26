@@ -1,18 +1,26 @@
 { config, lib, pkgs, ... }:
 {
   services.displayManager.sddm = {
-    enable = true;
-    wayland = {
-      enable = true;
-    };
-    package = pkgs.libsForQt5.sddm; # Це Qt5 версія
+    enable = true; # Enable SDDM.
+    wayland.enable = true;
+    theme = "sddm-astronaut-theme";
+
     extraPackages = with pkgs; [
-      libsForQt5.qt5.qtsvg
-      libsForQt5.qt5.qtmultimedia
-      libsForQt5.qt5.qtvirtualkeyboard
-      libsForQt5.qt5.qtgraphicaleffects
+      # Ці пакети необхідні для роботи теми на Qt6 (Unstable)
+      kdePackages.qt5compat
+      kdePackages.qtmultimedia
+      kdePackages.qtsvg
+      # Якщо ви хочете використовувати кастомні шрифти в темі:
+      # (наприклад, montserrat)
     ];
-    theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
   };
+  environment.etc."/usr/share/sddm/themes/sddm-astronaut-theme/theme.conf.user".text = ''
+    [General]
+    Background="/home/archer/nixos/media/wallpaper.png"
+    FormPosition=left
+    FullBlur=true
+    PartialBlur=true
+  '';
+
 }
 
