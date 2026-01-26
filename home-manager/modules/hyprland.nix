@@ -136,10 +136,10 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "/home/archer/Documents/Wallpaper/1.png";
+      preload = [ "/home/archer/nixos/media/wallpaper.png" ];
       wallpaper = [
-        "eDP-1,/home/archer/Documents/Wallpaper/1.png"
-        "HDMI-A-1,/home/archer/Documents/Wallpaper/1.png"
+        "eDP-1,/home/archer/nixos/media/wallpaper.png"
+        "HDMI-A-1,/home/archer/nixos/media/wallpaper.png"
       ];
     };
   };
