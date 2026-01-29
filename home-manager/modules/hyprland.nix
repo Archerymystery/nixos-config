@@ -85,7 +85,7 @@
         "$mainMod, L, exec, hyprlock"
 
         ",107, exec, grimblast copysave screen"
-        "CTRL,107, exec, grimblast copysave area"
+        "CTRL,107, exec, wofi-screenshot"
 
         "$mainMod,left,movefocus,l"
         "$mainMod,right,movefocus,r"
