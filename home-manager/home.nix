@@ -10,6 +10,7 @@
     ./modules/kitty.nix
     ./modules/wofi.nix
     ./modules/hyprlock.nix
+    ./modules/mako.nix
   ];
   home = {
     username = "archer";

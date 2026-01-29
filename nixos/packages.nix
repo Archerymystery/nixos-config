@@ -41,6 +41,8 @@
     (pkgs.callPackage ./custom_pakages/wofi-calc.nix { })
     (pkgs.callPackage ./custom_pakages/wofi-wifi-menu.nix { })
     playerctl
+    mako
+    libnotify
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
