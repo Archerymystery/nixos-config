@@ -82,6 +82,8 @@
         "$mainMod, K, togglespecialworkspace, magic"
         "$mainMod SHIFT, K, movetoworkspace, special:magic"
 
+        "$mainMod, L, exec, hyprlock"
+
         ",107, exec, grimblast copysave screen"
         "CTRL,107, exec, grimblast copysave area"
 
