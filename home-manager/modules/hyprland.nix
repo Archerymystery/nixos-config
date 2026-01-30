@@ -12,7 +12,12 @@
         "hyprctl setcursor Dracula-cursors 24"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "kitty"
+        "firefox"
+        "Telegram"
+        "sh {../../scripts/cleanup_after_startup.sh}"
       ];
+
       monitor = [
         "HDMI-A-1,3440x1440,0x0,1"
         "eDP-1,1920x1080,3440x0,1"
@@ -127,6 +132,10 @@
 
 
       windowrulev2 = [
+        "workspace 1, class:^(kitty)$"
+        "workspace 2, class:^(firefox)$"
+        "workspace 3, class:^(org.telegram.desktop)$"
+
         "float,title:(Picture-in-Picture)"
         "size 600 340,title:(Picture-in-Picture)"
         "move 100%-600 35,title:(Picture-in-Picture)"
