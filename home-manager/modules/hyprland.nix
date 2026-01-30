@@ -96,6 +96,9 @@
 
         "$mainMod SHIFT,V, exec, bash -c 'sh ${../../scripts/copy.sh}'"
 
+        "$mainMod, P, exec, hyprpicker -a"
+
+
         "$mainMod,left,movefocus,l"
         "$mainMod,right,movefocus,r"
         "$mainMod,up,movefocus,u"

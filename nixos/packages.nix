@@ -49,6 +49,7 @@
     mpv
     imv
     zenity
+    hyprpicker
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
