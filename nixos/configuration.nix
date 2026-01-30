@@ -18,7 +18,6 @@
     "nvidia_drm"
   ];
   services.udisks2.enable = true;
-  # programs.adb.enable = true;
   hardware.graphics =
     {
       enable = true;
@@ -73,14 +72,21 @@
     enable = true;
 
   };
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+  environment = {
+    shells = [ pkgs.fish pkgs.bash ];
+    variables =
+      {
+        EDITOR = "nvim";
+      };
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
   };
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     modesetting.enable = true;
-    open = true; # Set to true if using Turing or newer GPUs and you want the open kernels
+    open = true;
     powerManagement.enable = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;

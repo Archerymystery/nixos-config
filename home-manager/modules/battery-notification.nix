@@ -19,7 +19,6 @@
     };
   };
 
-  # The timer to run the service every minute
   systemd.user.timers.battery-monitor = {
     Unit = {
       Description = "Run battery monitor every minute";
