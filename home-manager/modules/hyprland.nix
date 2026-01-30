@@ -145,6 +145,9 @@
         "pin,title:(Picture-in-Picture)"
         #Telegram
         "fullscreen,title:(Media viewer)"
+
+        "fullscreen,class:(mpv)"
+        "fullscreen,class:(imv)"
       ];
     };
   };

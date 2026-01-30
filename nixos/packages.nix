@@ -46,6 +46,8 @@
     libnotify
     tesseract
     (pkgs.callPackage ./custom_pakages/wofi-screenshot.nix { })
+    mpv
+    imv
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
