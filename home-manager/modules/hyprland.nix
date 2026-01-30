@@ -10,8 +10,8 @@
         "hyprpaper"
         "waybar"
         "hyprctl setcursor Dracula-cursors 24"
-        "exec-once = wl-paste --type text --watch cliphist store"
-        "exec-once = wl-paste --type image --watch cliphist store"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
       monitor = [
         "HDMI-A-1,3440x1440,0x0,1"
