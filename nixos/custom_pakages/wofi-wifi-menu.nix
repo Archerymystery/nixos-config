@@ -10,11 +10,14 @@ pkgs.stdenv.mkDerivation rec {
     rev = "cb8da9cfd7e10d48ec831410c55104a4857251d3";
     hash = "sha256-jp6PKqRrUy9ACwbvLNs3Y7x1P5Ok6rwu8QETsSBGqJE=";
   };
-  runtimeInputs = [ pkgs.iw pkgs.wofi ];
+  nativeBuildInputs = [ pkgs.makeWrapper ];
+
+  buildInputs = [ pkgs.iw pkgs.wofi ];
   installPhase = ''
     mkdir -p $out/bin
     cp wofi-wifi-menu.sh $out/bin/${pname}
     chmod +x $out/bin/${pname}
-
+    wrapProgram $out/bin/${pname} --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.iw pkgs.wofi ]}
+  
   '';
 }
