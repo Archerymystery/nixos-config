@@ -37,7 +37,7 @@
       };
     };
   };
-
+  services.cliphist.enable = true;
 
   programs.home-manager.enable = true;
 }

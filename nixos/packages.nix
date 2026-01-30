@@ -3,7 +3,8 @@
     inputs.nixvim.packages.x86_64-linux.default
     fish
     fastfetch
-    pkgs.wl-clipboard
+    wl-clipboard
+    cliphist
     firefox
     kitty
     hyprpaper

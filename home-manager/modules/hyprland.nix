@@ -10,6 +10,8 @@
         "hyprpaper"
         "waybar"
         "hyprctl setcursor Dracula-cursors 24"
+        "exec-once = wl-paste --type text --watch cliphist store"
+        "exec-once = wl-paste --type image --watch cliphist store"
       ];
       monitor = [
         "HDMI-A-1,3440x1440,0x0,1"
@@ -77,7 +79,7 @@
         "$mainMod, V, togglefloating, "
         "$mainMod, P, pseudo, "
         "$mainMod, J, togglesplit,"
-        "$mainMod CTRL,C, exec, wofi-calc "
+        "$mainMod SHIFT,C, exec, wofi-calc "
 
         "$mainMod, K, togglespecialworkspace, magic"
         "$mainMod SHIFT, K, movetoworkspace, special:magic"
@@ -86,6 +88,8 @@
 
         ",107, exec, grimblast copysave screen"
         "CTRL,107, exec, wofi-screenshot"
+
+        "$mainMod SHIFT,V, exec, bash -c 'sh ${../../scripts/copy.sh}'"
 
         "$mainMod,left,movefocus,l"
         "$mainMod,right,movefocus,r"
