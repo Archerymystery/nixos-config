@@ -17,7 +17,7 @@
       padding = "15";
 
       icons = true;
-      max-icon-size = 48;
+      max-icon-size = 64;
       layer = "overlay";
     };
     extraConfig = ''
