@@ -4,19 +4,26 @@
     settings = {
       actions = true;
       anchor = "top-right";
-      background-color = "#203759";
-      border-color = "#090810";
-      border-size = 3;
-      border-radius = 4;
-      default-timeout = 4000;
-      font = "monospace 10";
-      height = 100;
+      background-color = "#1a1b26ee";
+      border-color = "#f28f61";
+      border-size = 2;
+      border-radius = 8;
+      text-color = "#d8dee9";
+      default-timeout = 5000;
+      font = "JetBrainsMono Nerd Font 11";
+      height = 150;
+      width = 350;
+      margin = "20";
+      padding = "15";
+
       icons = true;
-      ignore-timeout = false;
-      layer = "top";
-      margin = 10;
-      markup = true;
-      width = 300;
+      max-icon-size = 48;
+      layer = "overlay";
     };
+    extraConfig = ''
+      [urgency=high]
+      border-color=#e06c75
+      default-timeout=0
+    '';
   };
 }
