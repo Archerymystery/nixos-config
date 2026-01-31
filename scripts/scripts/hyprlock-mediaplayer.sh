@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 get_metadata(){
   echo $( playerctl metadata | grep "$1" | sed -E 's/^([^ ]+[ ]+){2}//');
  

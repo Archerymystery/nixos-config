@@ -15,7 +15,7 @@
         "kitty"
         "firefox"
         "Telegram"
-        "sh {../../scripts/cleanup_after_startup.sh}"
+        "cleanup-after-startup"
       ];
 
       monitor = [
@@ -94,7 +94,7 @@
         ",107, exec, grimblast copysave screen"
         "CTRL,107, exec, wofi-screenshot"
 
-        "$mainMod SHIFT,V, exec, bash -c 'sh ${../../scripts/copy.sh}'"
+        "$mainMod SHIFT,V, exec, copy"
 
         "$mainMod, P, exec, hyprpicker -a"
 

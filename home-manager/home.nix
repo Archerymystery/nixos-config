@@ -12,6 +12,8 @@
     ./modules/hyprlock.nix
     ./modules/mako.nix
     ./modules/battery-notification.nix
+    ../scripts/scripts.nix
+
   ];
   home = {
     username = "archer";

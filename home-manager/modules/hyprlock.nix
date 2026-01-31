@@ -125,7 +125,7 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:1000] sh ${../../scripts/hyprlock-mediaplayer.sh} --title'';
+          text = ''cmd[update:1000] hyprlcok-mediaplayer --title'';
           color = "rgb(255, 255, 255)";
           font_size = 14;
           font_family = "JetBrains Mono Nerd Font";
@@ -136,7 +136,7 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:1000] sh ${../../scripts/hyprlock-mediaplayer.sh} --artist'';
+          text = ''cmd[update:1000] hyprlcok-mediaplayer --artist'';
           color = "rgb(255, 255, 255)";
           font_size = 10;
           font_family = "JetBrains Mono Nerd Font";
@@ -147,7 +147,7 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:100] sh ${../../scripts/hyprlock-mediaplayer.sh} --progress'';
+          text = ''cmd[update:100] hyprlcok-mediaplayer --progress'';
           color = "rgb(255, 255, 255)";
           font_size = 12;
           font_family = "JetBrains Mono Nerd Font";
@@ -158,8 +158,8 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:100] sh ${../../scripts/hyprlock-mediaplayer.sh} --status'';
-          onclick = "sh ${../../scripts/hyprlock-mediaplayer.sh} --switch";
+          text = ''cmd[update:100] hyprlcok-mediaplayer --status'';
+          onclick = "hyprlcok-mediaplayer --switch";
           color = "rgb(255, 255, 255)";
           font_size = 20;
           font_family = "JetBrains Mono Nerd Font";
@@ -170,8 +170,8 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:1000] sh ${../../scripts/hyprlock-mediaplayer.sh} --icon '';
-          onclick = "sh ${../../scripts/hyprlock-mediaplayer.sh} --next";
+          text = ''cmd[update:1000] hyprlcok-mediaplayer --icon '';
+          onclick = "hyprlcok-mediaplayer --next";
           color = "rgb(255, 255, 255)";
           font_size = 20;
           font_family = "JetBrains Mono Nerd Font";
@@ -182,8 +182,8 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:1000] sh ${../../scripts/hyprlock-mediaplayer.sh} --icon  '';
-          onclick = "sh ${../../scripts/hyprlock-mediaplayer.sh} --previous";
+          text = ''cmd[update:1000] hyprlcok-mediaplayer --icon  '';
+          onclick = "hyprlcok-mediaplayer --previous";
           color = "rgb(255, 255, 255)";
           font_size = 20;
           font_family = "JetBrains Mono Nerd Font";
@@ -194,7 +194,7 @@
         }
         {
           monitor = "";
-          text = ''cmd[update:1000] sh ${../../scripts/hyprlock-mediaplayer.sh} --none'';
+          text = ''cmd[update:1000] hyprlcok-mediaplayer --none'';
           color = "rgb(255, 255, 255)";
           font_size = 24;
           font_family = "JetBrains Mono Nerd Font";
@@ -217,7 +217,7 @@
           border_size = 0;
           rotate = 0;
           reload_time = 2;
-          reload_cmd = ''sh ${../../scripts/hyprlock-mediaplayer.sh} --cover'';
+          reload_cmd = ''hyprlcok-mediaplayer --cover'';
           position = "-180,60";
           halign = "center";
           valign = "bottom";

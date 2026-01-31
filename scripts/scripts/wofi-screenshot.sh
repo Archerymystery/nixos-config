@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
 entries="󰍹 Capture screen\n󰩬 Capture area\n  Capture active window\n󱑀  Take in 5s\n󱑇  Take in 10s\n Capture text from screen"
 entriesLang="Ukrainian\nEnglish"
 selected=$(echo -e "$entries"|wofi --width 350 --height 240 --dmenu --cache-file /dev/null --location 0 )

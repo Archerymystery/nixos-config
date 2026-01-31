@@ -45,7 +45,6 @@
     mako
     libnotify
     tesseract
-    (pkgs.callPackage ./custom_pakages/wofi-screenshot.nix { })
     mpv
     imv
     zenity
