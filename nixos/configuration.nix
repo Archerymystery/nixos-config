@@ -9,6 +9,7 @@
       ./packages.nix
       ./modules/sddm.nix
       ./modules/polkit.nix
+      ./modules/vm.nix
     ];
   programs.neovim.enable = false;
   boot.initrd.kernelModules = [
@@ -92,7 +93,11 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
   programs.fish.enable = true;
-
+  fileSystems."/mnt/tera" = {
+    device = "/dev/disk/by-uuid/40914f97-8e59-49a9-8559-66cfb6727320 ";
+    fsType = "btrfs";
+    options = [ "nofail" "defaults" ];
+  };
   system.stateVersion = "24.11";
 
 }
