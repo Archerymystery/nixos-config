@@ -12,6 +12,7 @@
     ./modules/hyprlock.nix
     ./modules/mako.nix
     ./modules/battery-notification.nix
+    ./modules/vesktop.nix
     ../scripts/scripts.nix
 
   ];

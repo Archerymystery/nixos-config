@@ -22,7 +22,7 @@
     hyprcursor
     dracula-theme
     ocs-url
-    discord
+    # vesktop
     grimblast
     sl
     bat
@@ -49,6 +49,8 @@
     imv
     zenity
     hyprpicker
+    slack
+    postman
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
