@@ -8,20 +8,23 @@
   perSystem =
     {
       pkgs,
-      self',
       ...
     }:
+    let
+      selfpkgs = self.packages.${pkgs.system};
+    in
     {
       packages.terminal =
         (inputs.wrappers.wrapperModules.kitty.apply {
           inherit pkgs;
           imports = [ self.wrappersModules.kitty ];
-          shell = lib.getExe self'.packages.environment;
+          shell = lib.getExe selfpkgs.environment;
         }).wrapper;
       packages.environment = inputs.wrappers.lib.wrapPackage {
         inherit pkgs;
-        package = self'.packages.fish;
+        package = selfpkgs.fish;
         runtimeInputs = [
+          selfpkgs.git
         ];
         # env = {
         #   EDITOR = lib.getExe self'.packages.neovimDynamic;
