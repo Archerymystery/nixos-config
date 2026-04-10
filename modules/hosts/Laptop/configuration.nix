@@ -5,11 +5,11 @@
       self.nixosModules.LaptopHardware
     ];
 
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-    networking.hostName = "ArcherLaptop";
-    networking.networkmanager.enable = true;
+    {
+      imports = [
+        self.nixosModules.LaptopHardware
+        self.nixosModules.desktop
+      ];
 
     time.timeZone = "Europe/Berlin";
 
