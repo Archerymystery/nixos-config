@@ -1,35 +1,49 @@
-{ self, inputs, ... }: {
-  flake.nixosConfigurations.LaptopHardware = { config, lib, pkgs, modulesPath, ... }:
+{ self, inputs, ... }:
+{
+  flake.nixosModules.LaptopHardware =
+    {
+      config,
+      lib,
+      pkgs,
+      modulesPath,
+      ...
+    }:
 
     {
-      imports =
-        [
-          (modulesPath + "/installer/scan/not-detected.nix")
-        ];
+      imports = [
+        (modulesPath + "/installer/scan/not-detected.nix")
+      ];
 
-      boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+      boot.initrd.availableKernelModules = [
+        "nvme"
+        "xhci_pci"
+        "ahci"
+        "usb_storage"
+        "usbhid"
+        "sd_mod"
+      ];
       boot.initrd.kernelModules = [ ];
       boot.kernelModules = [ "kvm-amd" ];
       boot.extraModulePackages = [ ];
 
-      fileSystems."/" =
-        {
-          device = "/dev/disk/by-uuid/8fd20c87-c601-4af4-9251-a105dc039613";
-          fsType = "ext4";
-        };
+      fileSystems."/" = {
+        device = "/dev/disk/by-uuid/8fd20c87-c601-4af4-9251-a105dc039613";
+        fsType = "ext4";
+      };
 
-      fileSystems."/boot" =
-        {
-          device = "/dev/disk/by-uuid/2E8F-38DE";
-          fsType = "vfat";
-          options = [ "fmask=0077" "dmask=0077" ];
-        };
+      fileSystems."/boot" = {
+        device = "/dev/disk/by-uuid/2E8F-38DE";
+        fsType = "vfat";
+        options = [
+          "fmask=0077"
+          "dmask=0077"
+        ];
+      };
 
-      fileSystems."/home" =
-        {
-          device = "/dev/disk/by-uuid/43445a23-6ab1-4901-969c-c1b004333ae8";
-          fsType = "ext4";
-        };
+      fileSystems."/home" = {
+        device = "/dev/disk/by-uuid/43445a23-6ab1-4901-969c-c1b004333ae8";
+        fsType = "ext4";
+      };
 
       swapDevices = [ ];
 
