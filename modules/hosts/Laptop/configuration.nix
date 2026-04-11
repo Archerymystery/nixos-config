@@ -4,7 +4,6 @@
     {
       pkgs,
       config,
-      lib,
       ...
     }:
     let
@@ -83,7 +82,6 @@
         vim
         firefox
         wget
-        git
       ];
       system.stateVersion = "25.11";
     };
