@@ -14,6 +14,7 @@
       imports = [
         self.nixosModules.LaptopHardware
         self.nixosModules.desktop
+	self.nixosModules.general
       ];
 
       nix.settings.experimental-features = [
@@ -58,20 +59,6 @@
       programs.fish = {
         enable = true;
         package = selfpkgs.fish;
-      };
-      users.users.archer = {
-        isNormalUser = true;
-        description = "archer";
-        extraGroups = [
-          "networkmanager"
-          "wheel"
-          "kvm"
-          "adbusers"
-          "disk"
-          "virtualbox"
-        ];
-        shell = selfpkgs.fish;
-
       };
       services.displayManager.sddm = {
         enable = true;
