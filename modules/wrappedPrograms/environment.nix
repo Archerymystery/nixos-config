@@ -25,10 +25,11 @@
         package = selfpkgs.fish;
         runtimeInputs = [
           selfpkgs.git
-        ];
-        # env = {
-        #   EDITOR = lib.getExe self'.packages.neovimDynamic;
-        # };
+	  selfpkgs.nixvim
+	];
+        env = {
+          EDITOR = lib.getExe selfpkgs.nixvim;
+        };
       };
     };
 }
