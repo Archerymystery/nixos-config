@@ -26,6 +26,7 @@
         runtimeInputs = [
           selfpkgs.git
           selfpkgs.nixvim
+	  selfpkgs.lf
         ];
         env = {
           EDITOR = lib.getExe selfpkgs.nixvim;
