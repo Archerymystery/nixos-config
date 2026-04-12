@@ -25,8 +25,8 @@
         package = selfpkgs.fish;
         runtimeInputs = [
           selfpkgs.git
-	  selfpkgs.nixvim
-	];
+          selfpkgs.nixvim
+        ];
         env = {
           EDITOR = lib.getExe selfpkgs.nixvim;
         };
