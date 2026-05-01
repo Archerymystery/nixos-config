@@ -128,6 +128,9 @@
           "Mod+WheelScrollUp".focus-column-right = { };
           "Mod+Ctrl+WheelScrollDown".focus-workspace-down = { };
           "Mod+Ctrl+WheelScrollUp".focus-workspace-up = { };
+          "Print".screenshot = { };
+          "Mod+Print".screenshot-screen = { };
+          "Alt+Print".screenshot-window = { };
 
         };
       };
