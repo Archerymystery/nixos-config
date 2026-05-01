@@ -7,6 +7,7 @@
     in
     {
       imports = [
+        self.nixosModules.tablet
       ];
 
       programs.niri.enable = true;
