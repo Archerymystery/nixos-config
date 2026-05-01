@@ -24,9 +24,14 @@
         inherit pkgs;
         package = selfpkgs.fish;
         runtimeInputs = [
+          pkgs.tree
+          pkgs.bottom
+          pkgs.yazi
+          pkgs.nixfmt-tree
+
           selfpkgs.git
           selfpkgs.nixvim
-	  selfpkgs.lf
+
         ];
         env = {
           EDITOR = lib.getExe selfpkgs.nixvim;
