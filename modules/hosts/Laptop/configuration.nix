@@ -14,7 +14,8 @@
       imports = [
         self.nixosModules.LaptopHardware
         self.nixosModules.desktop
-	self.nixosModules.general
+        self.nixosModules.general
+        self.nixosModules.base
       ];
 
       nix.settings.experimental-features = [
@@ -70,6 +71,9 @@
         firefox
         wget
       ];
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.${config.preferences.user.name} = self.homeModules.LaptopHome;
       system.stateVersion = "25.11";
     };
 }

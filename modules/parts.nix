@@ -9,6 +9,9 @@
       wrappersModules = inputs.nixpkgs.lib.mkOption {
         default = { };
       };
+      homeModules = inputs.nixpkgs.lib.mkOption {
+        default = { };
+      };
       nixvimModules = inputs.nixpkgs.lib.mkOption {
         default = { };
       };
