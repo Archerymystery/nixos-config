@@ -14,12 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    nvf.url = "github:notashelf/nvf";
   };
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }

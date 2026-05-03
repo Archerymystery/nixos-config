@@ -30,11 +30,11 @@
           pkgs.nixfmt-tree
 
           selfpkgs.git
-          selfpkgs.nixvim
+          selfpkgs.neovim
 
         ];
         env = {
-          EDITOR = lib.getExe selfpkgs.nixvim;
+          EDITOR = lib.getExe selfpkgs.neovim;
         };
       };
     };

@@ -12,9 +12,10 @@
       homeModules = inputs.nixpkgs.lib.mkOption {
         default = { };
       };
-      nixvimModules = inputs.nixpkgs.lib.mkOption {
+      neovimModules = inputs.nixpkgs.lib.mkOption {
         default = { };
       };
+
     };
   };
   config = {
