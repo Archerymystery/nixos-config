@@ -1,7 +1,7 @@
-{ self, inputs, ... }:
+{ inputs, ... }:
 {
   flake.homeModules.vesktop =
-    { pkgs, config, ... }:
+    { ... }:
     {
       imports = [ inputs.nixcord.homeModules.nixcord ];
 
@@ -9,7 +9,6 @@
         enable = true;
         discord.vencord.enable = true;
 
-        
         userPlugins = {
           MessageColors = "github:henmalib/vc-messageColors/144482e0b889b333db6857d2ab6efc6a0d7d2313";
         };
@@ -22,7 +21,7 @@
           };
         };
         config = {
-          
+
           plugins = {
 
             anonymiseFileNames.enable = true;
@@ -67,7 +66,7 @@
 
           };
         };
- 
+
         extraConfig = {
           arRPC = true;
           appBadge = false;
