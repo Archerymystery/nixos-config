@@ -15,6 +15,8 @@
 
       environment.systemPackages = [
         selfpkgs.terminal
+        pkgs.mpv
+        pkgs.imv
       ];
       fonts.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
