@@ -8,6 +8,7 @@
     {
       imports = [
         self.nixosModules.tablet
+        self.nixosModules.obs
       ];
 
       programs.niri.enable = true;
