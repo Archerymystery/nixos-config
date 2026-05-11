@@ -17,6 +17,7 @@
         selfpkgs.terminal
         pkgs.mpv
         pkgs.imv
+        pkgs.telegram-desktop
       ];
       fonts.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
