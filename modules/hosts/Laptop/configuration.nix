@@ -71,9 +71,11 @@
         firefox
         wget
       ];
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.users.${config.preferences.user.name} = self.homeModules.LaptopHome;
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users.${config.preferences.user.name} = self.homeModules.LaptopHome;
+      };
       system.stateVersion = "25.11";
     };
 }
