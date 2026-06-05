@@ -16,10 +16,16 @@
 
       environment.systemPackages = [
         selfpkgs.terminal
+
         pkgs.mpv
         pkgs.imv
         pkgs.telegram-desktop
+        pkgs.libreoffice-qt
+        pkgs.hunspell
+        pkgs.hunspellDicts.uk_UA
+        pkgs.krita
       ];
+
       fonts.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
         ubuntu-sans
