@@ -12,6 +12,7 @@
 
       environment.systemPackages = [
         pkgs.opentabletdriver
+        pkgs.xournalpp
       ];
     };
 }
