@@ -28,6 +28,7 @@
           pkgs.bottom
           pkgs.yazi
           pkgs.nixfmt-tree
+          pkgs.wl-clipboard
 
           selfpkgs.git
           selfpkgs.neovim
