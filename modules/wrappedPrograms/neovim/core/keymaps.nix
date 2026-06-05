@@ -66,6 +66,21 @@
           action = ":Telescope git_branches<CR>";
           desc = " Select git branch";
         }
+        #--- comment ---
+        {
+          mode = "n";
+          key = "<C-/>";
+          action = "gcc";
+          noremap = false;
+          silent = true;
+        }
+        {
+          mode = "v";
+          key = "<C-/>";
+          action = "gc";
+          noremap = false;
+          silent = true;
+        }
       ];
     };
 }
