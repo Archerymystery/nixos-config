@@ -38,5 +38,23 @@
         sansSerif = [ "Ubuntu Sans" ];
         monospace = [ "JetBrainsMono Nerd Font" ];
       };
+      xdg.mime.defaultApplications = {
+        "application/pdf" = "firefox.desktop";
+        "image/png" = "imv.desktop";
+        "image/jpeg" = "imv.desktop";
+        "image/gif" = "imv.desktop";
+        "image/webp" = "imv.desktop";
+        "image/svg+xml" = "imv.desktop";
+        "video/mp4" = "mpv.desktop";
+        "video/mkv" = "mpv.desktop";
+        "video/webm" = "mpv.desktop";
+        "video/x-matroska" = "mpv.desktop";
+        "video/avi" = "mpv.desktop";
+        "application/vnd.oasis.opendocument.text" = "writer.desktop";
+        "application/vnd.oasis.opendocument.spreadsheet" = "calc.desktop";
+        "application/vnd.oasis.opendocument.presentation" = "impress.desktop";
+        "application/msword" = "writer.desktop";
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
+      };
     };
 }

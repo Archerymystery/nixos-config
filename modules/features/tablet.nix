@@ -14,5 +14,9 @@
         pkgs.opentabletdriver
         pkgs.xournalpp
       ];
+      xdg.mime.defaultApplications = {
+        "application/x-xopp" = "com.github.xournalpp.xournalpp.desktop";
+      };
+
     };
 }
