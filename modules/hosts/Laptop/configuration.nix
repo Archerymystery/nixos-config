@@ -22,48 +22,55 @@
         "nix-command"
         "flakes"
       ];
-      networking.hostName = "ArcherLaptop";
-      networking.networkmanager.enable = true;
-      hardware.bluetooth = {
-        enable = true;
-        powerOnBoot = true;
+      networking = {
+        hostName = "ArcherLaptop";
+        networkmanager.enable = true;
       };
-
-      services.upower.enable = true;
-      time.timeZone = "Europe/Berlin";
+      hardware.time.timeZone = "Europe/Berlin";
 
       i18n.defaultLocale = "en_US.UTF-8";
-      services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
-      };
-      services.xserver.xkb = {
-        layout = "us";
-        variant = "";
+      services = {
+        upower.enable = true;
+        pipewire = {
+          enable = true;
+          alsa.enable = true;
+          alsa.support32Bit = true;
+          pulse.enable = true;
+        };
+        xserver.xkb = {
+          layout = "us";
+          variant = "";
+        };
+        xserver = {
+          enable = false;
+          videoDrivers = [ "nvidia" ];
+        };
+        displayManager.sddm = {
+          enable = true;
+          wayland.enable = true;
+        };
+
       };
       nixpkgs.config.allowUnfree = true;
       console.keyMap = "us";
 
-      services.xserver.enable = false;
-      services.xserver.videoDrivers = [ "nvidia" ];
-      hardware.nvidia = {
-        modesetting.enable = true;
-        open = true;
-        powerManagement.enable = false;
-        nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
+      hardware = {
+        bluetooth = {
+          enable = true;
+          powerOnBoot = true;
+        };
+        nvidia = {
+          modesetting.enable = true;
+          open = true;
+          powerManagement.enable = false;
+          nvidiaSettings = true;
+          package = config.boot.kernelPackages.nvidiaPackages.stable;
+        };
       };
       programs.fish = {
         enable = true;
         package = selfpkgs.fish;
       };
-      services.displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-      };
-
       environment.systemPackages = with pkgs; [
         vim
         firefox
