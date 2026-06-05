@@ -25,6 +25,7 @@
                 };
                 formatting = {
                   command = [ "nixfmt" ];
+                };
               };
             };
           };
