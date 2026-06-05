@@ -52,10 +52,17 @@
         device = "/dev/disk/by-uuid/43445a23-6ab1-4901-969c-c1b004333ae8";
         fsType = "ext4";
       };
-
+      fileSystems."/mnt/tera" = {
+        device = "/dev/disk/by-uuid/40914f97-8e59-49a9-8559-66cfb6727320";
+        fsType = "btrfs";
+        options = [
+          "defaults"
+          "nofail"
+        ];
+      };
       swapDevices = [
         {
-          device = "/var/lib/swapfile";
+          device = "/mnt/tera/nixos.swapfile";
           size = 8192;
         }
       ];
