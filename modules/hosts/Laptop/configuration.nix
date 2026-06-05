@@ -26,7 +26,7 @@
         hostName = "ArcherLaptop";
         networkmanager.enable = true;
       };
-      hardware.time.timeZone = "Europe/Berlin";
+      time.timeZone = "Europe/Berlin";
 
       i18n.defaultLocale = "en_US.UTF-8";
       services = {
