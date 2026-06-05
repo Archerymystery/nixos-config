@@ -25,7 +25,15 @@
       boot.initrd.kernelModules = [ ];
       boot.kernelModules = [ "kvm-amd" ];
       boot.extraModulePackages = [ ];
+      boot.loader.systemd-boot.enable = false;
 
+      boot.loader.grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        useOSProber = true;
+      };
+      boot.loader.efi.canTouchEfiVariables = true;
       fileSystems."/" = {
         device = "/dev/disk/by-uuid/8fd20c87-c601-4af4-9251-a105dc039613";
         fsType = "ext4";
