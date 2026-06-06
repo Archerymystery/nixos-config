@@ -59,6 +59,9 @@
               enable = true;
               type = [ "rustfmt" ];
             };
+            lsp = {
+              enable = true;
+            };
           };
 
           python = {
