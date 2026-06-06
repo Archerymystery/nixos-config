@@ -24,6 +24,7 @@
         pkgs.hunspell
         pkgs.hunspellDicts.uk_UA
         pkgs.krita
+        pkgs.kicad
       ];
 
       fonts.packages = with pkgs; [
