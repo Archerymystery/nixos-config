@@ -29,6 +29,10 @@
           pkgs.yazi
           pkgs.nixfmt-tree
           pkgs.wl-clipboard
+          pkgs.scrcpy
+          pkgs.ffmpeg
+          pkgs.android-tools
+          pkgs.bat
 
           selfpkgs.git
           selfpkgs.neovim
