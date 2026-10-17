@@ -16,6 +16,10 @@
         self.nixosModules.desktop
         self.nixosModules.general
         self.nixosModules.base
+        self.nixosModules.sddm
+        self.nixosModules.docker
+        self.nixosModules.nix-ld
+        self.nixosModules.security
       ];
 
       nix.settings.experimental-features = [
@@ -25,6 +29,7 @@
       networking = {
         hostName = "ArcherLaptop";
         networkmanager.enable = true;
+
       };
       time.timeZone = "Europe/Berlin";
 
@@ -44,10 +49,6 @@
         xserver = {
           enable = false;
           videoDrivers = [ "nvidia" ];
-        };
-        displayManager.sddm = {
-          enable = true;
-          wayland.enable = true;
         };
 
       };
