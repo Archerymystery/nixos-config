@@ -23,15 +23,13 @@
         "sd_mod"
       ];
       boot.initrd.kernelModules = [ ];
-      boot.kernelModules = [ "kvm-amd" ];
-      boot.extraModulePackages = [ ];
       boot.loader.systemd-boot.enable = false;
 
       boot.loader.grub = {
         enable = true;
         device = "nodev";
         efiSupport = true;
-        useOSProber = true;
+        useOSProber = false;
       };
       boot.loader.efi.canTouchEfiVariables = true;
       fileSystems."/" = {
