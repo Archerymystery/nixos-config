@@ -21,7 +21,11 @@
       noctaliaExe = lib.getExe selfpkgs.myNoctalia;
 
       c = self.theme;
-
+      cursor = {
+        package = pkgs.volantes-cursors;
+        name = "volantes_cursors";
+        size = 24;
+      };
     in
     {
 
@@ -29,8 +33,31 @@
         spawn-at-startup = [
           noctaliaExe
         ];
-
+        cursor = {
+          xcursor-theme = cursor.name;
+          xcursor-size = cursor.size;
+          hide-when-typing = { };
+        };
+        prefer-no-csd = true;
         xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
+        outputs = {
+          "HDMI-A-1" = {
+            position = _: {
+              props = {
+                x = 0;
+                y = 0;
+              };
+            };
+          };
+          "eDP-1" = {
+            position = _: {
+              props = {
+                x = 3440;
+                y = 0;
+              };
+            };
+          };
+        };
         input = {
           keyboard = {
             xkb = {
