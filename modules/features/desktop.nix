@@ -24,7 +24,10 @@
         pkgs.hunspell
         pkgs.hunspellDicts.uk_UA
         pkgs.krita
-        pkgs.kicad
+        pkgs.vscode
+        pkgs.rustdesk
+        pkgs.google-chrome
+        pkgs.thunderbird
       ];
 
       fonts.packages = with pkgs; [
