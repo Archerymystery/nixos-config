@@ -78,7 +78,8 @@
           color13 = c.iris;
           color14 = c.rose;
           color15 = c.text;
-
+          background_opacity = "0.70";
+          dynamic_background_opacity = true;
         };
       };
     };
