@@ -1,0 +1,11 @@
+[SddmGreeterTheme]
+Name=Frieren
+Description=Campfire login
+Author=you
+Type=sddm-theme
+Version=1.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=frieren
+Theme-API=2.0
+QtVersion=6
