@@ -28,7 +28,11 @@
       };
     in
     {
-
+      env = {
+        XCURSOR_THEME = cursor.name;
+        XCURSOR_SIZE = toString cursor.size;
+        XCURSOR_PATH = "${cursor.package}/share/icons:${cursor.package}/share/pixmaps";
+      };
       settings = {
         spawn-at-startup = [
           noctaliaExe
